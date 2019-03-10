@@ -206,13 +206,17 @@ function updateDate(time) {
 }
 
 function updateTrackerPage() {
+  listen();
   let contractID = document.getElementById("parcelID");
-  let bHashElement = document.querySelectorAll("#blockhash");
-  let timeStamps = document.querySelectorAll(".parcel-timestamp");
+//  let bHashElement = document.querySelectorAll("#blockhash");
+//  let timeStamps = document.querySelectorAll(".parcel-timestamp");
+  let checkpoints = document.querySelectorAll(".checkpoints-container");
+  let numCheckpoints = logsObject.length;
 //  let dateObj = new Date(time);
 
   contractID.innerHTML = contractAddress;
-//  for (i of logsObject) {
-    
-//  }
+  for (let i = 0; i < numCheckpoints; i++) {
+    let title = checkpoints.getElementById("checkpoint-title");
+    title.innerHTML = logsObject[i].topics[0];
+  }
 }
