@@ -224,8 +224,8 @@ function updateTrackerPage() {
   contractID.innerHTML = contractAddress;
 
   for (let i = 0; i < numCheckpoints; i++) {
-    let time = Array.from(timestamp.getElementsByClassName("parcel-timestamp-time"))[0];
-    let date = Array.from(timestamp.getElementsByClassName("parcel-timestamp-date"))[0];
+    let time = Array.from(timestamps[i].getElementsByClassName("parcel-timestamp-time"))[0];
+    let date = Array.from(timestamps[i].getElementsByClassName("parcel-timestamp-date"))[0];
     time.innerHTML = "TIME (in hex): " + logsObject[i].data;
   }
 
