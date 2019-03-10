@@ -1,12 +1,13 @@
 
 // const aionweb3 = require("aion-web3");
 let web3 = new Web3(new Web3.providers.HttpProvider("https://api.nodesmith.io/v1/aion/avmtestnet/jsonrpc?apiKey=333be7bc8dcf4068807ba4c3c5209942"));
-let contractAddress = "0x0f3bc797daf2b0096c5d47bb313a51619d25a9dbf58c3525fd85678e81587c00";
+let contractAddress = "0x0f5243a90e84571274c478907b20d7956a7ee3d12236b1e577fe2b055a988626";
 // let contractAddress= "0x0fd562355cb8052471d32f2b1d707d05cb8684533299fe467ecf8a9affb16c5f";
-let accountAddress = "0xa029475725af9615a4599903e8191eb360a112150cf1f41c04cab8021cf66141";
+let accountAddress = "0xa04ef8ff2834bbb947acc7aa0f70d46c89e3b62f902da9d92504af0eac0553fe";
 //
-let accountPK = "47b4439dd0714ece60a32feda327916ff4274cededea766cf7bf3d6c8d569613b954f5c5b6ba285685d4ab575573dafd5c1a44a79af79796052fba57e864bfd4"
+  let accountPK = "cd2be12256f993ca1af34e81d836d0c068f14867331ca21a515895581c1cd8135fd5af71c83126393dbf7f6c68e2b9bb5bf20fcee66be1b941ab94382e015684"
 
+let logsObject;
 function greet() {
 
   var stringToGreet = document.getElementById("stringToGreet").value;
@@ -71,7 +72,7 @@ let data = setStorage.encodeToHex(stringToSet);
 
 // 2. Create TX object
 txObject = {
-  from: "0xa029475725af9615a4599903e8191eb360a112150cf1f41c04cab8021cf66141",
+  from: accountAddress,
   to: contractAddress,
   data: data,
   gas: 2000000,
@@ -92,7 +93,7 @@ function getString(){
   let aiwa = aionweb3;
 
   // 1. Define Method & Encode
-  var methodToCall = web3.avm.method("getString").argTypes()
+  var methodToCall = web3.avm.method("getString").argTypes("Address")
   //let _data = getValue.encodeToHex(0);
 
   let _data = methodToCall.encodeToHex()
@@ -110,14 +111,62 @@ function getString(){
   })
 }
 
-function listenToEvent(){
+function transfer(){
+  let aiwa = aionweb3;
+
+  var methodToCall = web3.avm.method("transfer").argTypes("Address")
+
+  var addressParam = document.getElementById("ToAddress").value;
+  let data = methodToCall.encodeToHex(addressParam);
+
+  // 2. Create TX object
+  txObject = {
+    from: accountAddress,
+    to: contractAddress,
+    data: data,
+    gas: 2000000,
+    type: '0xf',
+  }
+
+  // 3. Prompt AIWA
+  aiwa.eth.sendTransaction( // I assigned aiwa = aionweb3 previously
+    txObject
+  ).then(function(txHash){
+    console.log('txHash:', txHash);
+  });
+}
+
+function getOwner(){
+  let aiwa = aionweb3;
+
+  // 1. Define Method & Encode
+  var methodToCall = web3.avm.method("getOwner").argTypes("Address")
+  //let _data = getValue.encodeToHex(0);
+
+  let _data = methodToCall.encodeToHex()
+
+  var result = web3.eth.call({
+      to: contractAddress, // contract address
+      data: _data
+  });
+
+  result.then(function(value){
+
+    value = web3.avm.decodeOneObjectFromHex(value);
+    console.log(value);
+
+  })
+}
+
+function listen(){
 
   web3.eth.getPastLogs({
-    address: "0x0f3bc797daf2b0096c5d47bb313a51619d25a9dbf58c3525fd85678e81587c00",
+    address: contractAddress,
     fromBlock: 11000,
     topics: []
 }).then(function(result) {
   console.log("I GOT IT");
   console.log(result);
+  logsObject = result;
 })
 }
