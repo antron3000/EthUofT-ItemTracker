@@ -207,22 +207,26 @@ function updateDate(time) {
   // timeStamps.
 }
 
-async function updateTrackerPage() {
+function updateTrackerPage() {
   listen();
   setTimeout(3000);
   console.log("HERE");
   let contractID = document.getElementById("parcelID");
 //  let bHashElement = document.querySelectorAll("#blockhash");
 //  let timeStamps = document.querySelectorAll(".parcel-timestamp");
-  let checkpoints = document.querySelectorAll(".checkpoints-container");
+  let timestamps = Array.from(document.getElementsByClassName("parcel-timestamp"));
+
+                                              
+//    console.log(checkpoints);
   let numCheckpoints = logsObject.length;
 //  let dateObj = new Date(time);
   console.log(contractAddress);
   contractID.innerHTML = contractAddress;
 
   for (let i = 0; i < numCheckpoints; i++) {
-    let title = checkpoints.getElementById("checkpoint-title");
-    title.innerHTML = logsObject[i].topics[0];
+    let time = Array.from(timestamp.getElementsByClassName("parcel-timestamp-time"))[0];
+    let date = Array.from(timestamp.getElementsByClassName("parcel-timestamp-date"))[0];
+    time.innerHTML = "TIME (in hex): " + logsObject[i].data;
   }
 
 //  for (i of logsObject) {
