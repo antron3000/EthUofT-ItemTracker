@@ -7,7 +7,7 @@ import org.aion.avm.api.BlockchainRuntime;
 import org.aion.avm.userlib.AionMap;
 
 
-public class Items
+public class HelloAvm
 {
 
   public static final AionMap<Address, Address> allowed = new AionMap<>();
@@ -21,8 +21,8 @@ public class Items
   static {
     contractAddress = BlockchainRuntime.getAddress();
     owner = BlockchainRuntime.getCaller();
-    tokenName = "testToken";
-    tokenSymbol = "TST";
+    tokenName = "100kg Coffee";
+    tokenSymbol = "";
     //timestamp = BlockchainRuntime.getBlockTimestamp();
     //blockNumber = BlockchainRuntime.getBlockNumber();
   }
@@ -41,7 +41,6 @@ public class Items
     }
 
     public static void transfer(Address _to){
-      BlockchainRuntime.require(true);
 
          owner = _to;
 
