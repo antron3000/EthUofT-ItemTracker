@@ -7,7 +7,7 @@ import org.aion.avm.api.BlockchainRuntime;
 import org.aion.avm.userlib.AionMap;
 
 
-public class HelloAvm
+public class Items
 {
 
   public static final AionMap<Address, Address> allowed = new AionMap<>();
@@ -29,6 +29,10 @@ public class HelloAvm
 
     public static Address getOwner(){
       return owner;
+    }
+
+    public static String getName(){
+      return tokenName;
     }
 
     public static void setNameAndSymbol(String _name, String _symbol){
