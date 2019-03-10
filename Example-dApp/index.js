@@ -10,7 +10,7 @@ let accountAddress = "0xa04ef8ff2834bbb947acc7aa0f70d46c89e3b62f902da9d92504af0e
 let logsObject;
 
 // Update DOM on page load
-$(updateTrackerPage);
+// $(updateTrackerPage);
 
 function gre bh6et() {
 
