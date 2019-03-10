@@ -8,6 +8,10 @@ let accountAddress = "0xa04ef8ff2834bbb947acc7aa0f70d46c89e3b62f902da9d92504af0e
   let accountPK = "cd2be12256f993ca1af34e81d836d0c068f14867331ca21a515895581c1cd8135fd5af71c83126393dbf7f6c68e2b9bb5bf20fcee66be1b941ab94382e015684"
 
 let logsObject;
+
+// Update DOM on page load
+$(updateTrackerPage);
+
 function greet() {
 
   var stringToGreet = document.getElementById("stringToGreet").value;
@@ -169,4 +173,21 @@ function listen(){
   console.log(result);
   logsObject = result;
 })
+}
+
+/*** DOM Manipulation functions ***/
+function updateDate(time) {
+  // timeStamps.
+}
+
+function updateTrackerPage() {
+  let contractID = document.getElementById("parcelID");
+  let bHashElement = document.querySelectorAll("#blockhash");
+  let timeStamps = document.querySelectorAll(".parcel-timestamp");
+//  let dateObj = new Date(time);
+
+  contractID.innerHTML = contractAddress;
+//  for (i of logsObject) {
+    
+//  }
 }

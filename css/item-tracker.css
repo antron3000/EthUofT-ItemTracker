@@ -321,6 +321,11 @@ input[type=submit] {
     font-family: domine-bold;
 }
 
+#parcelID {
+    font-family: roboto-light;
+    color: #f1f1f1;
+}
+
 #blockhash {
     font-family: roboto-family;
 }
