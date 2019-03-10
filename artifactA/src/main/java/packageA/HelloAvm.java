@@ -22,7 +22,7 @@ public class HelloAvm
     contractAddress = BlockchainRuntime.getAddress();
     owner = BlockchainRuntime.getCaller();
     tokenName = "100kg Coffee";
-    tokenSymbol = "";
+    tokenSymbol = "COVFEFE";
     //timestamp = BlockchainRuntime.getBlockTimestamp();
     //blockNumber = BlockchainRuntime.getBlockNumber();
   }
