@@ -11,6 +11,9 @@ public class HelloAvm
 {
 
   public static final AionMap<Address, Address> allowed = new AionMap<>();
+  public static final AionMap<Address, Boolean> owned = new AionMap<>();
+
+
 
   private static Address owner;
   private static Address contractAddress;
@@ -41,6 +44,7 @@ public class HelloAvm
     }
 
     public static void transfer(Address _to){
+      BlockchainRuntime.require(owned.get(BlockchainRuntime.getCaller()));
 
          owner = _to;
 
