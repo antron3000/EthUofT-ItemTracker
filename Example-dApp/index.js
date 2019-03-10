@@ -213,6 +213,16 @@ function updateTrackerPage() {
 
   contractID.innerHTML = contractAddress;
 //  for (i of logsObject) {
-    
 //  }
+}
+
+
+function showItemDetails(){
+  let ItemContract = contractAddress;
+  let itemOwner = getOwner();
+  let itemName = getName();
+
+  document.getElementbyId("ItemName").innerHTML = getName();
+  document.getElementbyId("ItemContract").innerHTML = "Contract: " + contractAddress;
+  document.getElementById("ItemOwner") = "Owner: " + getOwner();
 }
