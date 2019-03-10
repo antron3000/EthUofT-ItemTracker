@@ -44,7 +44,6 @@ public class HelloAvm
     }
 
     public static void transfer(Address _to){
-      BlockchainRuntime.require(owned.get(BlockchainRuntime.getCaller()));
 
          owner = _to;
 
