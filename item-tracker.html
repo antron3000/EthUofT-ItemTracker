@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="utf-8">
+    <title>TITLE</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+
+    <!-- Index CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/item-tracker.css">
+ </head>
+ <body>
+    <div id="background">
+        <img src="./resources/images/bg.jpg" class="stretch" alt="" />
+    </div>
+    <!-- Dashboard Navbar -->
+    <nav class="navbar">
+        <a class="navbar-brand" href="#" id="sidebar-toggle">
+            <img class="navbar-logo" src="./resources/images/icons/logo-icon.png" width="40" height="40" alt="">
+        </a>
+        <ul class="d-flex justify-content-end align-items-center nav-icon">
+            <li class="nav-item">
+                <div class="btn-group">
+                    <button class="btn"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
+                        <img id="navbar-notif-icon" class="navbar-icon invert-color" src="./resources/images/icons/notification-none-icon.png">
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <!-- Populate with notification information -->
+                        <a class="dropdown-item roboto-light" href="#">These will be the notifications</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item roboto-light" href="#">This will be another notification</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <img class="navbar-icon" src="./resources/images/icons/calendar-icon.png">
+                </a>
+            </li>
+            <li class="nav-item">
+                <div class="btn-group">
+                    <button class="btn"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button">
+                            <img class="navbar-icon" src="./resources/images/icons/stockprofile-icon.png">
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item roboto-light" href="#">Profile</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item roboto-light" href="./index.html">Log Out</a>
+                        </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="page-wrapper">
+
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <form autocomplete="off" action="/action_page.php">
+            <div class="autocomplete" style="width:400px; background-color: white;">
+              <input id="myInput" type="text" name="myCountry" placeholder="Username" style="border-color: white; width:400px;">
+            </div>
+          </form>
+        </ul>
+      </div>
+
+      <div id="dashboard">
+          <div class="container-fluid d-flex justify-content-around align-items-center">
+              <div class="row card-deck">
+                  <div class="col-lg-12 profile-card card">
+                      <div class="card-body">
+                        <div class="parcel-header">
+                          <h1 class="parcel-header-title">PARCEL TRACKER</h2>
+                          <span id="parcelID">PARCEL 1</span>
+                        </div>
+                        <div class="container d-flex justify-content-around">
+                          <div class="container checkpoints-container d-flex justify-content-around"> 
+                                    <div class="d-block w-100 checkpoint">
+                                        <label class="radio">
+                                          <input type="radio" name="r" value="1" checked>
+                                          <span></span>
+                                        </label>
+                                        <h2 class="checkpoint-title">WAREHOUSE</h2>
+                                        <div class="parcel-status">
+                                          <div class="parcel-timestamp">
+                                            <div class="parcel-timestamp-title">
+                                              ITEM CREATED
+                                            </div>
+                                            <div class="parcel-timestamp-time">
+                                                <b>TIME:</b> 6:30 PM
+                                            </div>
+                                            <div class="parcel-timestamp-date">
+                                              <b>DATE:</b> 9 FEB 2018
+                                            </div>
+                                          </div>
+                                          <div class="parcel-timestamp">
+                                            <div class="parcel-timestamp-title">
+                                              ITEM TRANSFERED
+                                            </div>
+                                            <div class="parcel-timestamp-time">
+                                                <b>TIME:</b> 6:30 PM
+                                            </div>
+                                              
+                                            <div class="parcel-timestamp-date">
+                                              <b>DATE:</b> 9 FEB 2018
+                                            </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                          </div>
+                          <div class="container checkpoints-container d-flex justify-content-around"> 
+                                    <div class="d-block w-100 checkpoint">
+                                        <label class="radio">
+                                          <input type="radio" name="r" value="1" checked>
+                                          <span></span>
+                                        </label>
+                                        <h2 class="checkpoint-title">WAREHOUSE</h2>
+                                        <div class="parcel-status">
+                                          <div class="parcel-timestamp">
+                                            <div class="parcel-timestamp-title">
+                                              ITEM CREATED
+                                            </div>
+                                            <div class="parcel-timestamp-time">
+                                                <b>TIME:</b> 6:30 PM
+                                            </div>
+                                            <div class="parcel-timestamp-date">
+                                              <b>DATE:</b> 9 FEB 2018
+                                            </div>
+                                          </div>
+                                          <div class="parcel-timestamp">
+                                            <div class="parcel-timestamp-title">
+                                              ITEM TRANSFERED
+                                            </div>
+                                            <div class="parcel-timestamp-time">
+                                                <b>TIME:</b> 6:30 PM
+                                            </div>
+                                              
+                                            <div class="parcel-timestamp-date">
+                                              <b>DATE:</b> 9 FEB 2018
+                                            </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                          </div>
+                          <div class="container checkpoints-container d-flex justify-content-around"> 
+                                    <div class="d-block w-100 checkpoint">
+                                        <label class="radio">
+                                          <input type="radio" name="r" value="1" checked>
+                                          <span></span>
+                                        </label>
+                                        <h2 class="checkpoint-title">WAREHOUSE</h2>
+                                        <div class="parcel-status">
+                                          <div class="parcel-timestamp">
+                                            <div class="parcel-timestamp-title">
+                                              ITEM CREATED
+                                            </div>
+                                            <div class="parcel-timestamp-time">
+                                                <b>TIME:</b> 6:30 PM
+                                            </div>
+                                            <div class="parcel-timestamp-date">
+                                              <b>DATE:</b> 9 FEB 2018
+                                            </div>
+                                          </div>
+                                          <div class="parcel-timestamp">
+                                            <div class="parcel-timestamp-title">
+                                              ITEM TRANSFERED
+                                            </div>
+                                            <div class="parcel-timestamp-time">
+                                                <b>TIME:</b> 6:30 PM
+                                            </div>
+                                              
+                                            <div class="parcel-timestamp-date">
+                                              <b>DATE:</b> 9 FEB 2018
+                                            </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                          </div>
+                          <div class="container checkpoints-container d-flex justify-content-around"> 
+                                    <div class="d-block w-100 checkpoint">
+                                        <label class="radio">
+                                          <input type="radio" name="r" value="1" checked>
+                                          <span></span>
+                                        </label>
+                                        <h2 class="checkpoint-title">RECEIVER</h2>
+                                        <br>
+                                        <div class="container d-flex justify-content-around">
+                                          <button type="submit" class="btn btn-outline-light">DELIVER</button>
+                                        </div>
+                                      </div>
+                                  </div>
+                          </div>
+                        </div>
+                        <hr>
+                      </div>    
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/users.js" ></script>
+
+    <!-- aion web3 avm file -->
+    <script type="text/javascript" src="./js/web3.min.js"></script>
+    
+    <!-- application JS file -->
+    <script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>
