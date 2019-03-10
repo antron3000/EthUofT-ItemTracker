@@ -1,7 +1,7 @@
 
 // const aionweb3 = require("aion-web3");
 let web3 = new Web3(new Web3.providers.HttpProvider("https://api.nodesmith.io/v1/aion/avmtestnet/jsonrpc?apiKey=333be7bc8dcf4068807ba4c3c5209942"));
-let contractAddress = "0x0fa47cdd9672d265d879fc81693c2ee6e73fb5c08863a8109d04e87d64629ac7";
+let contractAddress = "0x0fd5593f4ab5fbc9613561a97ba1ada52f3e21010dec301cc5d97953ef5c5c57";
 // let contractAddress= "0x0fd562355cb8052471d32f2b1d707d05cb8684533299fe467ecf8a9affb16c5f";
 let accountAddress = "0xa04ef8ff2834bbb947acc7aa0f70d46c89e3b62f902da9d92504af0eac0553fe";
 //
