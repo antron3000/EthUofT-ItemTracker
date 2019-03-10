@@ -222,6 +222,7 @@ function updateTrackerPage() {
 //  let timeStamps = document.querySelectorAll(".parcel-timestamp");
   let checkpoints = document.querySelectorAll(".checkpoints-container");
   let numCheckpoints = logsObject.length;
+  console.log(logsObject);
 //  let dateObj = new Date(time);
 
   contractID.innerHTML = contractAddress;
