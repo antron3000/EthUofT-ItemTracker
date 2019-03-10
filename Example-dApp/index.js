@@ -200,15 +200,7 @@ function listen(){
 })
 }
 
-function showItemDetails(){
-  let ItemContract = contractAddress;
-  let itemOwner = getOwner();
-  let itemName = getName();
 
-  document.getElementbyId("ItemName").innerHTML = getName();
-  document.getElementbyId("ItemContract").innerHTML = "Contract: " + contractAddress;
-  document.getElementById("ItemOwner") = "Owner: " + getOwner();
-}
 
 /*** DOM Manipulation functions ***/
 function updateDate(time) {
