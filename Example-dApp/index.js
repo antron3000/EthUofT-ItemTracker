@@ -200,23 +200,6 @@ function listen(){
 })
 }
 
-/*** DOM Manipulation functions ***/
-function updateDate(time) {
-  // timeStamps.
-}
-
-function updateTrackerPage() {
-  let contractID = document.getElementById("parcelID");
-  let bHashElement = document.querySelectorAll("#blockhash");
-  let timeStamps = document.querySelectorAll(".parcel-timestamp");
-//  let dateObj = new Date(time);
-
-  contractID.innerHTML = contractAddress;
-//  for (i of logsObject) {
-//  }
-}
-
-
 function showItemDetails(){
   let ItemContract = contractAddress;
   let itemOwner = getOwner();
@@ -226,3 +209,30 @@ function showItemDetails(){
   document.getElementbyId("ItemContract").innerHTML = "Contract: " + contractAddress;
   document.getElementById("ItemOwner") = "Owner: " + getOwner();
 }
+
+/*** DOM Manipulation functions ***/
+function updateDate(time) {
+  // timeStamps.
+}
+
+function updateTrackerPage() {
+  listen();
+  let contractID = document.getElementById("parcelID");
+//  let bHashElement = document.querySelectorAll("#blockhash");
+//  let timeStamps = document.querySelectorAll(".parcel-timestamp");
+  let checkpoints = document.querySelectorAll(".checkpoints-container");
+  let numCheckpoints = logsObject.length;
+//  let dateObj = new Date(time);
+
+  contractID.innerHTML = contractAddress;
+
+  for (let i = 0; i < numCheckpoints; i++) {
+    let title = checkpoints.getElementById("checkpoint-title");
+    title.innerHTML = logsObject[i].topics[0];
+  }
+
+//  for (i of logsObject) {
+//  }
+}
+
+
