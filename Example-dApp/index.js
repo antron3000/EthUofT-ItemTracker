@@ -12,7 +12,6 @@ let logsObject;
 // Update DOM on page load
 // $(updateTrackerPage);
 
-function gre bh6et() {
 
   var stringToGreet = document.getElementById("stringToGreet").value;
 
@@ -234,5 +233,3 @@ function updateTrackerPage() {
 //  for (i of logsObject) {
 //  }
 }
-
-
