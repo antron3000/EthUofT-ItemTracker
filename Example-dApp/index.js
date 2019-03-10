@@ -12,7 +12,7 @@ let logsObject;
 // Update DOM on page load
 $(updateTrackerPage);
 
-function greet() {
+function gre bh6et() {
 
   var stringToGreet = document.getElementById("stringToGreet").value;
 
