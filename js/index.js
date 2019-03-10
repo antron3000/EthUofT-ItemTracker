@@ -1,17 +1,13 @@
 
 // const aionweb3 = require("aion-web3");
 let web3 = new Web3(new Web3.providers.HttpProvider("https://api.nodesmith.io/v1/aion/avmtestnet/jsonrpc?apiKey=333be7bc8dcf4068807ba4c3c5209942"));
-let contractAddress = "0x0fa47cdd9672d265d879fc81693c2ee6e73fb5c08863a8109d04e87d64629ac7";
+let contractAddress = "0x0f5243a90e84571274c478907b20d7956a7ee3d12236b1e577fe2b055a988626";
 // let contractAddress= "0x0fd562355cb8052471d32f2b1d707d05cb8684533299fe467ecf8a9affb16c5f";
 let accountAddress = "0xa04ef8ff2834bbb947acc7aa0f70d46c89e3b62f902da9d92504af0eac0553fe";
 //
   let accountPK = "cd2be12256f993ca1af34e81d836d0c068f14867331ca21a515895581c1cd8135fd5af71c83126393dbf7f6c68e2b9bb5bf20fcee66be1b941ab94382e015684"
 
 let logsObject;
-
-// Update DOM on page load
-$(updateTrackerPage);
-
 function greet() {
 
   var stringToGreet = document.getElementById("stringToGreet").value;
@@ -162,6 +158,7 @@ function getOwner(){
   })
 }
 
+
 function getName(){
   let aiwa = aionweb3;
 
@@ -186,7 +183,6 @@ function getName(){
 
 
 
-
 function listen(){
 
   web3.eth.getPastLogs({
@@ -198,21 +194,4 @@ function listen(){
   console.log(result);
   logsObject = result;
 })
-}
-
-/*** DOM Manipulation functions ***/
-function updateDate(time) {
-  // timeStamps.
-}
-
-function updateTrackerPage() {
-  let contractID = document.getElementById("parcelID");
-  let bHashElement = document.querySelectorAll("#blockhash");
-  let timeStamps = document.querySelectorAll(".parcel-timestamp");
-//  let dateObj = new Date(time);
-
-  contractID.innerHTML = contractAddress;
-//  for (i of logsObject) {
-    
-//  }
 }
